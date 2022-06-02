@@ -10,7 +10,7 @@ const App = () => {
       <div className="blur" style={{ top: "36%", left: "-8rem" }}></div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/" element={<Profile />} />
+        <Route path="/profile" element={<Profile />} />
         {/* <Auth/> */}
       </Routes>
     </div>
