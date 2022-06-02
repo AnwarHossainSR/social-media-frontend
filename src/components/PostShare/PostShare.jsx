@@ -6,12 +6,14 @@ import {
   UilTimes,
 } from "@iconscout/react-unicons";
 import React, { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ProfileImage from "../../img/profileImg.jpg";
 import "./PostShare.css";
 
 const PostShare = () => {
   const [image, setImage] = useState(null);
   const imageRef = useRef();
+  const navigate = useNavigate();
 
   const onImageChange = (event) => {
     if (event.target.files && event.target.files[0]) {
@@ -23,7 +25,7 @@ const PostShare = () => {
   };
   return (
     <div className="PostShare">
-      <img src={ProfileImage} alt="" />
+      <img src={ProfileImage} alt="" onClick={() => navigate("/profile")} />
       <div>
         <input type="text" placeholder="What's happening" />
         <div className="postOptions">
